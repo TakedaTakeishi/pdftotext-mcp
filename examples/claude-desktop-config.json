@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "pdftotext": {
+      "command": "pdftotext-mcp"
+    }
+  }
+}
