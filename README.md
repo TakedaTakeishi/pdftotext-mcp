@@ -15,6 +15,12 @@ Unlike other PDF MCP servers that suffer from logging interference, complex depe
 - ✅ **Production tested** - Successfully tested with Claude Desktop and other MCP clients
 - ✅ **Feature complete** - Page-specific extraction, layout preservation, encoding options
 - ✅ **Error handling** - Comprehensive validation and helpful error messages
+- ✅ **Cached results** - LRU cache (max 5 files) reuses results when PDF hasn't changed
+- ✅ **Book page support** - `offset` parameter converts book pages to PDF pages automatically
+- ✅ **Clean mode** - Strips page numbers, headers, and layout noise
+- ✅ **Chapter detection** - `chapterInRange` detects the current chapter in the extracted range
+- ✅ **EN/ES support** - Detects "Chapter"/"Capítulo", "Part"/"Parte", etc.
+- ✅ **Page offset detection** - Estimates front matter pages (or returns null + manual instructions)
 
 ## 📋 Features
 
@@ -25,6 +31,12 @@ Unlike other PDF MCP servers that suffer from logging interference, complex depe
 - 🛡️ File validation and security checks
 - ⚡ Fast processing with configurable timeouts
 - 🔍 Detailed error reporting with troubleshooting hints
+- 💾 **LRU cache** (configurable, max 5 files) — automatically reuses results when the same PDF+query is requested again
+- 📏 **Offset-aware page selection** — pass `offset` from `get_pdf_info` to map book page numbers to PDF pages
+- 🧹 **Clean extraction** — `clean: true` removes standalone page numbers, short headers, and repeated decoration characters
+- 📖 **Chapter metadata** — `chapterInRange` returns `{ number, title }` when a chapter heading is detected near the extracted content
+- 🌐 **Multi-language chapter detection** — supports English and Spanish headings (Chapter/Capítulo, Part/Parte, Lesson/Lección, etc.)
+- 📐 **Page offset estimation** — `get_pdf_info` returns `pageOffset` (front matter pages before content) with fallback instructions when detection fails
 
 ## 🔧 Prerequisites
 
