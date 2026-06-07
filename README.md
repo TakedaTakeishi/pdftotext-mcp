@@ -15,12 +15,7 @@ Unlike other PDF MCP servers that suffer from logging interference, complex depe
 - ✅ **Production tested** - Successfully tested with Claude Desktop and other MCP clients
 - ✅ **Feature complete** - Page-specific extraction, layout preservation, encoding options
 - ✅ **Error handling** - Comprehensive validation and helpful error messages
-- ✅ **Cached results** - LRU cache (max 5 files) reuses results when PDF hasn't changed
-- ✅ **Book page support** - `offset` parameter converts book pages to PDF pages automatically
-- ✅ **Clean mode** - Strips page numbers, headers, and layout noise
-- ✅ **Chapter detection** - `chapterInRange` detects the current chapter in the extracted range
-- ✅ **EN/ES support** - Detects "Chapter"/"Capítulo", "Part"/"Parte", etc.
-- ✅ **Page offset detection** - Estimates front matter pages (or returns null + manual instructions)
+- ✅ **Enhanced** - Smart caching, book-page offsets, clean mode, chapter detection (see Features)
 
 ## 📋 Features
 
